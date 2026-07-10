@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Galería</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas | Galería</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
+
 <body>
-    
+    <div class="contenedor">
+
+        <header>
+            <h1 class="logo">Casey Reas</h1>
+            <p class="subtitulo">Código, sistemas y arte generativo contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="galeria.html" class="activo">Galería</a></li>
+                <li><a href="produccion.html">Producción</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <div class="dos-columnas">
+
+                <aside class="columna-angosta">
+                    <section>
+                        <h2>Dato curioso</h2>
+                        <p>Hacé click en el botón para conocer un dato curioso al azar sobre Casey Reas.</p>
+                        <div class="caja-dato">
+                            <p id="dato">Todavía no hay ningún dato. ¡Probá el botón!</p>
+                        </div>
+                        <button type="button" id="btnDato">Mostrar otro dato</button>
+                    </section>
+
+                    <section>
+                        <h3>Obras y conceptos clave</h3>
+                        <ul class="conceptos">
+                            <li>Software Structures</li>
+                            <li>Process</li>
+                            <li>Generative Systems</li>
+                            <li>Emergencia</li>
+                            <li>Arte basado en reglas</li>
+                            <li>Visualización algorítmica</li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <section class="columna-ancha">
+                    <h2>Galería de obras</h2>
+                    <p>Selección de obras del estudio de Casey Reas. Podés cambiar el tamaño de las imágenes y el tema de
+                        color de la galería con los siguientes botones.</p>
+
+                    <div class="controles">
+                        <button type="button" id="btnTamanio">Cambiar tamaño</button>
+                        <button type="button" id="btnTema">Cambiar tema de color</button>
+                    </div>
+
+                    <!-- Insertar obras -->
+                    <div id="galeria"></div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>Para contactarse escribir a
+                <a href="mailto:casey@artedigital.com">casey@artedigital.com</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="js/galeria.js"></script>
 </body>
+
 </html>

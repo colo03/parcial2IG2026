@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas | Producción de instalaciones</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <header>
+            <h1 class="logo">Casey Reas</h1>
+            <p class="subtitulo">Código, sistemas y arte generativo contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="produccion.html" class="activo">Producción</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Gestión de producción de instalaciones</h2>
+
+            <section>
+                <img src="img/reas-3.jpg" alt="Obra generativa del estudio de Casey Reas" class="foto-intro">
+                <h3>¿Cómo usar esta herramienta?</h3>
+                <p>Esta herramienta ayuda a gestionar la producción de instalaciones interactivas del estudio de Casey
+                    Reas. Seguí estos pasos:</p>
+                <ol class="conceptos">
+                    <li>Ingresá la cantidad de instalaciones a producir, las horas que trabaja cada persona por día y el
+                        honorario por hora. Presioná <strong>Comenzar carga</strong>.</li>
+                    <li>Cargá los datos de cada instalación (nombre, cantidad de personas y días de producción). El
+                        formulario se irá habilitando y deshabilitando según el momento.</li>
+                    <li>Cuando termines de cargar todas las instalaciones, se habilitará el botón
+                        <strong>Calcular resultados</strong>.</li>
+                    <li>Para volver a empezar, usá el botón <strong>Reiniciar</strong>.</li>
+                </ol>
+            </section>
+
+            <form id="formConfig">
+                <fieldset id="fieldConfig">
+                    <legend>Paso 1 · Datos generales del estudio</legend>
+
+                    <div class="campo">
+                        <label for="cantidadInstalaciones">Cantidad de instalaciones a producir</label>
+                        <input type="number" name="cantidadInstalaciones" id="cantidadInstalaciones"
+                            placeholder="Ej: 3">
+                    </div>
+
+                    <div class="campo">
+                        <label for="horasPorDia">Horas por día que trabaja cada persona</label>
+                        <input type="number" name="horasPorDia" id="horasPorDia" placeholder="Ej: 8">
+                    </div>
+
+                    <div class="campo">
+                        <label for="honorarioPorHora">Honorario por hora (en pesos)</label>
+                        <input type="number" name="honorarioPorHora" id="honorarioPorHora"
+                            placeholder="Ej: 5000">
+                    </div>
+
+                    <button type="submit">Comenzar carga</button>
+                    <p class="error" id="msjConfig"></p>
+                </fieldset>
+            </form>
+
+            <form id="formInstalacion">
+                <fieldset id="fieldInstalacion" disabled>
+                    <legend>Paso 2 · Carga de instalaciones</legend>
+
+                    <div class="campo">
+                        <label for="nombreInstalacion">Nombre de la instalación</label>
+                        <input type="text" name="nombreInstalacion" id="nombreInstalacion" placeholder="Ej: Signals">
+                    </div>
+
+                    <div class="campo">
+                        <label for="personas">Cantidad de personas necesarias</label>
+                        <input type="number" name="personas" id="personas" placeholder="Ej: 4">
+                    </div>
+
+                    <div class="campo">
+                        <label for="dias">Días estimados de producción</label>
+                        <input type="number" name="dias" id="dias" placeholder="Ej: 12">
+                    </div>
+
+                    <button type="submit">Agregar instalación</button>
+                    <p class="error" id="msjInstalacion"></p>
+                    <p class="progreso" id="progresoCarga"></p>
+                </fieldset>
+            </form>
+
+            <div class="acciones">
+                <button type="button" id="btnCalcular" disabled>Calcular resultados</button>
+                <button type="button" id="btnReiniciar" disabled>Reiniciar</button>
+            </div>
+
+            <!-- Mostrar resultados -->
+            <div id="resultados"></div>
+
+        </main>
+
+        <footer>
+            <p>Para contactarse escribir a
+                <a href="mailto:casey@artedigital.com">casey@artedigital.com</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="js/produccion.js"></script>
+</body>
+
+</html>

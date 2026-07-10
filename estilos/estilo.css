@@ -1,0 +1,413 @@
+
+
+:root {
+    --azul-oscuro: #10263b;      
+    --azul-medio: #1c6ea4;       
+    --azul-claro: #2b93d6;       
+    --celeste: #e7f2fa;          
+    --blanco: #f7fbfe;           
+    --gris-texto: #33424f;       
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../img/fondo.png");
+    background-repeat: repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+
+    /* centrado del contenedor con flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 75rem;
+    background-color: var(--blanco);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(16, 38, 59, 0.35);
+}
+
+h1,
+h2,
+h3,
+.destacado,
+.logo,
+figcaption strong {
+    font-family: "Arvo", serif;
+    color: var(--azul-oscuro);
+}
+
+
+header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+}
+
+header h1,
+.logo {
+    color: var(--blanco);
+    font-size: 2.6rem;
+    letter-spacing: 0.05rem;
+}
+
+header .subtitulo {
+    color: var(--celeste);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/*Nav*/
+nav {
+    background-color: var(--azul-medio);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    width: auto;
+}
+
+/* estados de los links del menú */
+nav a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 1.8rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--blanco);
+}
+
+nav a:hover {
+    background-color: var(--azul-claro);
+}
+
+nav a:active {
+    background-color: var(--azul-oscuro);
+}
+
+/* link de la página actual */
+nav a.activo {
+    background-color: var(--azul-oscuro);
+}
+
+/* contenido */
+main {
+    padding: 2.5rem 2rem;
+}
+
+main h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 0.15rem solid var(--azul-claro);
+    padding-bottom: 0.4rem;
+}
+
+main h3 {
+    font-size: 1.2rem;
+    color: var(--azul-medio);
+    margin-bottom: 0.5rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+    color: var(--gris-texto);
+}
+
+/* imagen decorativa que ocupa todo el ancho de una sección */
+.foto-intro {
+    width: 100%;
+    border-radius: 0.3rem;
+    margin-bottom: 1.2rem;
+}
+
+
+.cita {
+    background-color: var(--celeste);
+    border-left: 0.35rem solid var(--azul-medio);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.cita .destacado {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/* 3 cols*/
+.columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.columna {
+    flex: 1 1 30%;
+    background-color: var(--celeste);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+}
+
+.columna article {
+    margin-bottom: 1.8rem;
+}
+
+.columna article:last-child {
+    margin-bottom: 0;
+}
+
+.columna img {
+    width: 100%;
+    border-radius: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+/* 2 cols  */
+.dos-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.columna-angosta {
+    flex: 1 1 28%;          
+    background-color: var(--celeste);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+}
+
+.columna-ancha {
+    flex: 2 1 60%;         
+}
+
+.caja-dato {
+    background-color: var(--blanco);
+    border: 0.15rem solid var(--azul-claro);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#dato {
+    color: var(--azul-oscuro);
+    font-style: italic;
+    min-height: 3rem;
+}
+
+.conceptos {
+    list-style: square;
+    padding-left: 1.4rem;
+    color: var(--gris-texto);
+}
+
+.conceptos li {
+    margin-bottom: 0.4rem;
+}
+
+/* galeria */
+.controles {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease;
+}
+
+.obra {
+    text-align: center;
+}
+
+.obra img {
+    width: 16rem;                 
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    display: block;
+    box-shadow: 0 0.2rem 0.6rem rgba(16, 38, 59, 0.4);
+    transition: width 0.3s ease;
+}
+
+.obra figcaption {
+    margin-top: 0.6rem;
+    color: var(--gris-texto);
+}
+
+.obra figcaption strong {
+    font-size: 1.05rem;
+}
+
+/* btns */
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.7rem 1.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--azul-claro);
+}
+
+button:disabled {
+    background-color: #9fb3c0;
+    cursor: not-allowed;
+}
+
+form {
+    background-color: var(--celeste);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+fieldset {
+    border: 0.12rem solid var(--azul-claro);
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+}
+
+fieldset:disabled {
+    opacity: 0.55;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--azul-medio);
+    padding: 0 0.5rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.campo input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 0.1rem solid #b9cdd9;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+/* mensajes de error de validación */
+.error {
+    color: #b3261e;
+    font-weight: bold;
+    min-height: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* mensaje de progreso de la carga */
+.progreso {
+    color: var(--azul-medio);
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+
+/* ejercicio */
+#resultados {
+    background-color: var(--celeste);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#resultados h3 {
+    margin-top: 1rem;
+}
+
+#resultados .valor {
+    color: var(--azul-oscuro);
+    font-weight: bold;
+}
+
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--celeste);
+    padding: 1.8rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--azul-claro);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .nota {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    color: #9fb3c0;
+}
+/*
+@media (max-width: 48rem) {
+
+    .columna,
+    .columna-angosta,
+    .columna-ancha {
+        flex: 1 1 100%;    
+    }
+
+    header h1,
+    .logo {
+        font-size: 2rem;
+    }
+}
+*/
