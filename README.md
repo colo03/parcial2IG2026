@@ -1,5 +1,5 @@
-# parcial2IG2026
+# Segundo Parcial
 
-Nombre y apellido: Valentín Piczman
-Segundo Parcial - Informática General 
+Valentín Piczman
+Segundo Parcial - Informática General
 Artes Multimediales - UNA

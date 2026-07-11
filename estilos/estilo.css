@@ -1,29 +1,17 @@
-
-
-:root {
-    --azul-oscuro: #10263b;      
-    --azul-medio: #1c6ea4;       
-    --azul-claro: #2b93d6;       
-    --celeste: #e7f2fa;          
-    --blanco: #f7fbfe;           
-    --gris-texto: #33424f;       
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-image: url("../img/fondo.png");
     background-repeat: repeat;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--azul-oscuro);
+    color: #10263b;
     line-height: 1.6;
     min-height: 100vh;
     padding: 2rem 1rem;
-
-    /* centrado del contenedor con flexbox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +20,7 @@ body {
 .contenedor {
     width: 100%;
     max-width: 75rem;
-    background-color: var(--blanco);
+    background-color: #f7fbfe;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0.5rem 1.5rem rgba(16, 38, 59, 0.35);
@@ -45,33 +33,32 @@ h3,
 .logo,
 figcaption strong {
     font-family: "Arvo", serif;
-    color: var(--azul-oscuro);
+    color: #10263b;
 }
 
-
 header {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
+    background-color: #10263b;
+    color: #f7fbfe;
     padding: 2.5rem 2rem 2rem 2rem;
     text-align: center;
 }
 
 header h1,
 .logo {
-    color: var(--blanco);
+    color: #f7fbfe;
     font-size: 2.6rem;
     letter-spacing: 0.05rem;
 }
 
 header .subtitulo {
-    color: var(--celeste);
+    color: #e7f2fa;
     font-size: 1.1rem;
     margin-top: 0.5rem;
 }
 
 /*Nav*/
 nav {
-    background-color: var(--azul-medio);
+    background-color: #1c6ea4;
 }
 
 nav ul {
@@ -88,7 +75,7 @@ nav li {
 /* estados de los links del menú */
 nav a {
     display: block;
-    color: var(--blanco);
+    color: #f7fbfe;
     text-decoration: none;
     padding: 1rem 1.8rem;
     font-weight: bold;
@@ -97,20 +84,20 @@ nav a {
 
 nav a:link,
 nav a:visited {
-    color: var(--blanco);
+    color: #f7fbfe;
 }
 
 nav a:hover {
-    background-color: var(--azul-claro);
+    background-color: #2b93d6;
 }
 
 nav a:active {
-    background-color: var(--azul-oscuro);
+    background-color: #10263b;
 }
 
 /* link de la página actual */
 nav a.activo {
-    background-color: var(--azul-oscuro);
+    background-color: #10263b;
 }
 
 /* contenido */
@@ -121,19 +108,19 @@ main {
 main h2 {
     font-size: 1.6rem;
     margin-bottom: 0.8rem;
-    border-bottom: 0.15rem solid var(--azul-claro);
+    border-bottom: 0.15rem solid #2b93d6;
     padding-bottom: 0.4rem;
 }
 
 main h3 {
     font-size: 1.2rem;
-    color: var(--azul-medio);
+    color: #1c6ea4;
     margin-bottom: 0.5rem;
 }
 
 main p {
     margin-bottom: 1rem;
-    color: var(--gris-texto);
+    color: #33424f;
 }
 
 /* imagen decorativa que ocupa todo el ancho de una sección */
@@ -143,10 +130,9 @@ main p {
     margin-bottom: 1.2rem;
 }
 
-
 .cita {
-    background-color: var(--celeste);
-    border-left: 0.35rem solid var(--azul-medio);
+    background-color: #e7f2fa;
+    border-left: 0.35rem solid #1c6ea4;
     padding: 1.2rem 1.5rem;
     margin-bottom: 2rem;
     font-style: italic;
@@ -167,7 +153,7 @@ main p {
 
 .columna {
     flex: 1 1 30%;
-    background-color: var(--celeste);
+    background-color: #e7f2fa;
     border-radius: 0.4rem;
     padding: 1.5rem;
 }
@@ -194,26 +180,26 @@ main p {
 }
 
 .columna-angosta {
-    flex: 1 1 28%;          
-    background-color: var(--celeste);
+    flex: 1 1 28%;
+    background-color: #e7f2fa;
     border-radius: 0.4rem;
     padding: 1.5rem;
 }
 
 .columna-ancha {
-    flex: 2 1 60%;         
+    flex: 2 1 60%;
 }
 
 .caja-dato {
-    background-color: var(--blanco);
-    border: 0.15rem solid var(--azul-claro);
+    background-color: #f7fbfe;
+    border: 0.15rem solid #2b93d6;
     border-radius: 0.4rem;
     padding: 1rem;
     margin-bottom: 1.5rem;
 }
 
 #dato {
-    color: var(--azul-oscuro);
+    color: #10263b;
     font-style: italic;
     min-height: 3rem;
 }
@@ -221,7 +207,7 @@ main p {
 .conceptos {
     list-style: square;
     padding-left: 1.4rem;
-    color: var(--gris-texto);
+    color: #33424f;
 }
 
 .conceptos li {
@@ -251,7 +237,7 @@ main p {
 }
 
 .obra img {
-    width: 16rem;                 
+    width: 16rem;
     max-width: 100%;
     height: auto;
     border-radius: 0.3rem;
@@ -262,7 +248,7 @@ main p {
 
 .obra figcaption {
     margin-top: 0.6rem;
-    color: var(--gris-texto);
+    color: #33424f; 
 }
 
 .obra figcaption strong {
@@ -272,8 +258,8 @@ main p {
 /* btns */
 button {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--azul-medio);
-    color: var(--blanco);
+    background-color: #1c6ea4;
+    color: #f7fbfe;
     border: none;
     border-radius: 0.3rem;
     padding: 0.7rem 1.3rem;
@@ -284,7 +270,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--azul-claro);
+    background-color: #2b93d6;
 }
 
 button:disabled {
@@ -293,14 +279,14 @@ button:disabled {
 }
 
 form {
-    background-color: var(--celeste);
+    background-color: #e7f2fa;
     border-radius: 0.4rem;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 fieldset {
-    border: 0.12rem solid var(--azul-claro);
+    border: 0.12rem solid #2b93d6;
     border-radius: 0.4rem;
     padding: 1.2rem;
 }
@@ -311,7 +297,7 @@ fieldset:disabled {
 
 legend {
     font-weight: bold;
-    color: var(--azul-medio);
+    color: #1c6ea4;
     padding: 0 0.5rem;
 }
 
@@ -323,7 +309,7 @@ legend {
     display: block;
     margin-bottom: 0.3rem;
     font-weight: bold;
-    color: var(--azul-oscuro);
+    color: #10263b;
 }
 
 .campo input {
@@ -344,14 +330,14 @@ legend {
 
 /* mensaje de progreso de la carga */
 .progreso {
-    color: var(--azul-medio);
+    color: #1c6ea4;
     font-weight: bold;
     margin-top: 0.8rem;
 }
 
 /* ejercicio */
 #resultados {
-    background-color: var(--celeste);
+    background-color: #e7f2fa;
     border-radius: 0.4rem;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -362,7 +348,7 @@ legend {
 }
 
 #resultados .valor {
-    color: var(--azul-oscuro);
+    color: #10263b;
     font-weight: bold;
 }
 
@@ -374,15 +360,15 @@ legend {
 }
 
 footer {
-    background-color: var(--azul-oscuro);
-    color: var(--celeste);
+    background-color: #10263b;
+    color: #e7f2fa;
     padding: 1.8rem 2rem;
     text-align: center;
     font-size: 0.9rem;
 }
 
 footer a {
-    color: var(--azul-claro);
+    color: #2b93d6;
     text-decoration: none;
 }
 
