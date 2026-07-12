@@ -1,20 +1,18 @@
-/* =========================================================
-   galeria.js
+/* 
    Funcionalidades de la página Galería:
-   1) Generar la galería de obras con JavaScript.
+   1) Generar la galería de obras con JS.
    2) Cambiar el tamaño de las imágenes.
-   3) Cambiar el tema de color de la galería.
-   4) Mostrar un dato curioso al azar.
-   ========================================================= */
+   3) Mostrar un dato curioso al azar.
+   */
 
 
 
 let obras = [
-    { imagen: "img/atomism.jpg", nombre: "Atomism", anio: 2009 },
-    { imagen: "img/insilico.jpg", nombre: "Insilico I", anio: 2018 },
-    { imagen: "img/insilico2.jpg", nombre: "Insilico II", anio: 2018 },
-    { imagen: "img/insilico3.jpg", nombre: "Insilico III", anio: 2019 },
-    { imagen: "img/untiteledfilmstill.jpg", nombre: "Untitled Film Still", anio: 2016 }
+    { imagen: "img/atomism.jpg", nombre: "Atomism", anio: "2023" },
+    { imagen: "img/insilico.jpg", nombre: "IN SILICO I", anio: "2025" },
+    { imagen: "img/insilico2.jpg", nombre: "IN SILICO II", anio: "2025" },
+    { imagen: "img/insilico3.jpg", nombre: "IN SILICO III", anio: "2025" },
+    { imagen: "img/untiteledfilmstill.jpg", nombre: "Untitled Film Still", anio: "2019/2023" }
 ];
 
 let galeria = document.querySelector("#galeria");
@@ -58,35 +56,10 @@ function aplicarTamanio() {
     for (let i = 0; i < imagenes.length; i++) {
         imagenes[i].style.width = ancho;
     }
-}
-
-
-//cambio de colores
-let temaOscuro = false;
-
-let btnTema = document.querySelector("#btnTema");
-
-btnTema.addEventListener("click", function () {
-    temaOscuro = !temaOscuro;
-    aplicarTema();
-});
-
-function aplicarTema() {
-    let leyendas = document.querySelectorAll(".obra figcaption");
-
-    if (temaOscuro) {
-        galeria.style.backgroundColor = "#10263b";
-        for (let i = 0; i < leyendas.length; i++) {
-            leyendas[i].style.color = "#f7fbfe";
-        }
-    } else {
-        galeria.style.backgroundColor = "";
-        for (let i = 0; i < leyendas.length; i++) {
-            leyendas[i].style.color = "";
-        }
+    for (const imagen of imagenes) {
+        imagen.style.width = ancho;
     }
 }
-
 
 //Datos curiosos
 let datosCuriosos = [

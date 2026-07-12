@@ -123,11 +123,13 @@ main p {
     color: #33424f;
 }
 
-/* imagen decorativa que ocupa todo el ancho de una sección */
 .foto-intro {
-    width: 100%;
+    width: 33rem;
+    max-width: 100%;
+    height: auto;
     border-radius: 0.3rem;
-    margin-bottom: 1.2rem;
+    display: block;
+    margin: 0 auto 1.2rem auto;
 }
 
 .cita {
@@ -180,7 +182,7 @@ main p {
 }
 
 .columna-angosta {
-    flex: 1 1 28%;
+    flex: 2 2 25%;
     background-color: #e7f2fa;
     border-radius: 0.4rem;
     padding: 1.5rem;
